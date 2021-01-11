@@ -91,7 +91,7 @@
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="https://www.facebook.com/Solutions-102365351830114" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.facebook.com/sahil.shaikh.9256028/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
 								<li><a href="https://www.instagram.com/xecsahil" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 								<li><a href="https://github.com/Ashura-Sheikh/" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 
@@ -101,7 +101,25 @@
 							</ul>
 						</div>
 					</footer>
+					<!-- Facebook-SDK -->
+					<script>
+  						window.fbAsyncInit = function() {
+    						FB.init({
+      						appId      : '3605929036109570',
+      						xfbml      : true,
+      						version    : 'v9.0'
+    					});
+    					FB.AppEvents.logPageView();
+   					};
 
+  						(function(d, s, id){
+     						var js, fjs = d.getElementsByTagName(s)[0];
+     						if (d.getElementById(id)) {return;}
+     						js = d.createElement(s); js.id = id;
+     						js.src = "https://connect.facebook.net/en_US/sdk.js";
+     						fjs.parentNode.insertBefore(js, fjs);
+   						}(document, 'script', 'facebook-jssdk'));
+					</script>
 			</div>
 
 		<!-- BG -->
