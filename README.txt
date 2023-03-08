@@ -1,10 +1,6 @@
 Dimension by Sheikh Sahil
 
-Test Web-Portfolio
-
-
-(* = not included)
-
+Web-Portfolio
 
 Credits:
 
