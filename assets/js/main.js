@@ -401,12 +401,13 @@
 			// Addition 
 			const words = [
 				"Business Consultant",
-				"Vendor Manager",
+				"Scaled Ops",
 				"Stakeholder Management",
 				"Business Analyst",
 				"Tech Consultant",
 				"Automation Specialist",
-				"API Integration Expert"
+				"API Integration Expert",
+				"AI Agent Systems Architect"
 			];
 			
 			let wordIndex = 0;

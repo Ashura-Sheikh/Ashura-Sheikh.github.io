@@ -22,6 +22,14 @@
 	font-size: 0.7rem;
 }
 
+#work .career-summary .stat-detail {
+	display: block;
+	margin-top: 0.2rem;
+	font-size: 0.62rem;
+	color: rgba(255, 255, 255, 0.55);
+	letter-spacing: 0.02em;
+}
+
 /* Experience: use extra width so cards sit side by side, matching Capabilities */
 @media screen and (min-width: 900px) {
 	#main #work {
@@ -466,6 +474,164 @@ body.light-theme ul.icons li a:active {
 /* tech-card, business-card, highlight, experience-card, career-summary, tech-desc,
    highlight-list, carousel controls all live inside the always-dark modal cards, so
    they intentionally keep their default light-on-dark styling in both page themes. */
+
+/* ==========================================
+   Case Studies — homepage scroll section (folded in 2026-08-13, per Sheikh's
+   direct decision to reverse the earlier standalone-discreet-page approach).
+   Lives inside #main article like every sibling section, so it gets the
+   same dark modal-card background/show-hide behavior for free — no separate
+   card-level background needed here, only the icon/grid treatment below,
+   styled to match #career's .tech-grid/.tech-card (Tool Kit) as asked.
+========================================== */
+
+#case-studies .case-studies-intro {
+	color: rgba(255, 255, 255, 0.75);
+	margin: 0.5rem 0 0;
+}
+
+/* Static count line — computed from caseStudies.length in CaseStudies.astro,
+   never hardcoded, so it can't drift if the v1 card subset changes later.
+   Badged, 2026-08-13, per Sheikh's ask — the key credibility read on this
+   section, so it needed to stand out rather than blend with body copy. Same
+   accent-tinted background already used for icon slots elsewhere on the site
+   (.tech-card i, .case-study-card__icon), not a new one-off treatment. */
+#case-studies .case-studies-count {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	background: rgba(73, 191, 157, 0.12);
+	border: solid 1px rgba(73, 191, 157, 0.35);
+	border-radius: 100px;
+	padding: 0.5rem 1.15rem;
+	color: #49bf9d;
+	font-size: 0.8rem;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	margin: 1rem 0 0;
+}
+
+#case-studies .case-studies-count strong {
+	font-size: 1.05rem;
+}
+
+/* Same intro-line treatment, added to Testimonials and Contact for
+   consistency with Case Studies/About Me, 2026-08-13 content review. */
+.testimonial-intro,
+.contact-intro {
+	color: rgba(255, 255, 255, 0.75);
+	margin: 0.5rem 0 0;
+}
+
+.case-study-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.25rem;
+	margin-top: 1.5rem;
+}
+
+/* Same width-expansion treatment already used for #work/#project so a
+   multi-column grid actually has room to breathe on wide screens. */
+@media screen and (min-width: 900px) {
+	#main #case-studies {
+		width: 78vw;
+		max-width: 1300px;
+	}
+}
+
+.case-study-card {
+	text-align: left;
+	padding: 1.1rem;
+}
+
+/* Same icon-slot treatment as .tech-card i (Tool Kit) — accent-tinted
+   rounded square — the actual visual link between the two sections. */
+.case-study-card__icon {
+	width: 2.25rem;
+	height: 2.25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(73, 191, 157, 0.12);
+	border-radius: 8px;
+	font-size: 1rem;
+	margin-bottom: 0.75rem;
+}
+
+.case-study-blurb {
+	color: rgba(255, 255, 255, 0.85);
+	margin: 0.5rem 0 0;
+	font-size: 0.92rem;
+}
+
+/* Process flow diagram — one hue (the site's existing accent green, already
+   proven legible against this same dark card background elsewhere), used
+   for sequence/identity only, not magnitude — see ProcessFlow.astro. */
+.process-flow {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem 0;
+	margin: 1.25rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.process-flow__step {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+}
+
+.process-flow__node {
+	flex-shrink: 0;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 100%;
+	border: solid 2px #49bf9d;
+	color: #49bf9d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+.process-flow__label {
+	font-size: 0.82rem;
+	line-height: 1.4;
+	color: rgba(255, 255, 255, 0.75);
+	max-width: 9rem;
+}
+
+.process-flow__arrow {
+	width: 1.25rem;
+	height: 1.25rem;
+	color: rgba(255, 255, 255, 0.35);
+	margin: 0 0.5rem;
+	flex-shrink: 0;
+	align-self: center;
+}
+
+@media screen and (max-width: 736px) {
+	.process-flow {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.75rem;
+	}
+
+	.process-flow__step {
+		width: 100%;
+	}
+
+	.process-flow__arrow {
+		transform: rotate(90deg);
+		margin: 0.25rem 0 0.25rem 0.9rem;
+	}
+
+	.process-flow__label {
+		max-width: none;
+	}
+}
 
 /* Keep long-form text at a comfortable reading width even though wide cards use more screen space */
 @media screen and (min-width: 900px) {
