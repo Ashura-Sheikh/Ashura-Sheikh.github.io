@@ -398,4 +398,220 @@
 						$main._show(location.hash.substr(1), true);
 					});
 
+			// Addition 
+			const words = [
+				"Business Consultant",
+				"Vendor Manager",
+				"Stakeholder Management",
+				"Business Analyst",
+				"Tech Consultant",
+				"Automation Specialist",
+				"API Integration Expert"
+			];
+			
+			let wordIndex = 0;
+			let letterIndex = 0;
+			let deleting = false;
+			
+			function typeEffect() {
+				const target = document.getElementById("typing");
+			
+				const current = words[wordIndex];
+			
+				if (!deleting) {
+					target.textContent = current.substring(0, letterIndex++);
+				} else {
+					target.textContent = current.substring(0, letterIndex--);
+				}
+			
+				if (!deleting && letterIndex === current.length + 1) {
+					deleting = true;
+					setTimeout(typeEffect, 1500);
+					return;
+				}
+			
+				if (deleting && letterIndex === 0) {
+					deleting = false;
+					wordIndex = (wordIndex + 1) % words.length;
+				}
+			
+				setTimeout(typeEffect, deleting ? 50 : 100);
+			}
+			
+			typeEffect();
+
+			const toggle = document.getElementById("themeToggle");
+			const toggleIcon = toggle.querySelector(".icon");
+
+			function applyTheme(isLight) {
+				document.body.classList.toggle("light-theme", isLight);
+				toggleIcon.classList.toggle("fa-moon", !isLight);
+				toggleIcon.classList.toggle("fa-sun", isLight);
+			}
+
+			applyTheme(localStorage.getItem("theme") === "light");
+
+			toggle.onclick = () => {
+				const isLight = !document.body.classList.contains("light-theme");
+				applyTheme(isLight);
+				localStorage.setItem("theme", isLight ? "light" : "dark");
+			};
+
+			const mainNav = document.getElementById("mainNav");
+			const navToggle = document.getElementById("navToggle");
+			const navToggleIcon = navToggle.querySelector(".icon");
+
+			function setNavOpen(isOpen) {
+				mainNav.classList.toggle("nav-open", isOpen);
+				navToggle.setAttribute("aria-expanded", isOpen);
+				navToggleIcon.classList.toggle("fa-bars", !isOpen);
+				navToggleIcon.classList.toggle("fa-times", isOpen);
+			}
+
+			navToggle.onclick = () => setNavOpen(!mainNav.classList.contains("nav-open"));
+
+			mainNav.querySelectorAll("ul a").forEach(link => {
+				link.addEventListener("click", () => setNavOpen(false));
+			});
+
+document.querySelectorAll(".tech-card, .experience-card, .highlight").forEach(card=>{
+
+	card.addEventListener("mousemove",(e)=>{
+
+	const rect=card.getBoundingClientRect();
+
+	const x=e.clientX-rect.left;
+
+	const y=e.clientY-rect.top;
+
+	card.style.transform=
+
+	`translateY(-6px) rotateX(${-(y-rect.height/2)/15}deg) rotateY(${(x-rect.width/2)/15}deg)`;
+
+	});
+
+	card.addEventListener("mouseleave",()=>{
+
+	card.style.transform="";
+
+	});
+
+	});
+
+			document.querySelectorAll(
+				".tech-card, .experience-card, .highlight, .career-summary > div, .testimonial-card"
+			).forEach(el => el.classList.add("reveal"));
+
+			new MutationObserver(mutations => {
+				mutations.forEach(mutation => {
+					const article = mutation.target;
+					if (!article.classList.contains("active") || article.dataset.revealed) return;
+					article.dataset.revealed = "true";
+					article.querySelectorAll(".reveal").forEach((el, i) => {
+						setTimeout(() => el.classList.add("in-view"), i * 80);
+					});
+				});
+			}).observe(document.getElementById("main"), {
+				attributes: true,
+				attributeFilter: ["class"],
+				subtree: true
+			});
+
+			const testimonialCards = Array.from(document.querySelectorAll(".testimonial-card"));
+			const testimonialDots = Array.from(document.querySelectorAll(".carousel-dots .dot"));
+			let currentTestimonial = 0;
+
+			function showTestimonial(index) {
+				currentTestimonial = (index + testimonialCards.length) % testimonialCards.length;
+				testimonialCards.forEach((card, i) => card.classList.toggle("current", i === currentTestimonial));
+				testimonialDots.forEach((dot, i) => dot.classList.toggle("active", i === currentTestimonial));
+			}
+
+			const prevArrow = document.querySelector(".carousel-arrow.prev");
+			const nextArrow = document.querySelector(".carousel-arrow.next");
+			if (prevArrow) prevArrow.addEventListener("click", () => showTestimonial(currentTestimonial - 1));
+			if (nextArrow) nextArrow.addEventListener("click", () => showTestimonial(currentTestimonial + 1));
+			testimonialDots.forEach((dot, i) => dot.addEventListener("click", () => showTestimonial(i)));
+
+			if (testimonialCards.length) showTestimonial(0);
+
+	const sections=document.querySelectorAll("article");
+
+const nav=document.querySelectorAll("nav a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+if(pageYOffset>=section.offsetTop-150){
+
+current=section.id;
+
+}
+
+});
+
+nav.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.href.includes(current)){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+function toggleProject(button){
+
+	const details=button.nextElementSibling;
+	
+	details.style.display=
+	
+	details.style.display==="block"
+	
+	?
+	
+	"none"
+	
+	:
+	
+	"block";
+	
+	}
+	const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+
+    const update=()=>{
+
+        const target=+counter.dataset.target;
+        const current=+counter.innerText;
+
+        const increment=target/150;
+
+        if(current<target){
+
+            counter.innerText=Math.ceil(current+increment);
+
+            setTimeout(update,20);
+
+        }else{
+
+            counter.innerText=target;
+
+        }
+
+    }
+
+    update();
+
+});
+
+
 })(jQuery);

@@ -1,15 +1,16 @@
 <!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>My-Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- ==========================================
+     Custom CSS
+     All personal styling goes here
+========================================== -->
+<link rel="stylesheet" href="assets/css/custom.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -20,76 +21,441 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon fa-home"></span>
+							<span class="icon fa-code"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
 								<h1>Sheikh Mustafa Sahil</h1>
-								<p>Consultant [Tech/Business]
+								<span>Bridging Business Strategy & Software Engineering with AI Solutioning</span>
+								<!--<p>Consultant [Tech/Business]</p> -->
+								<p>
+									<span id="typing"></span>
+								</p>
+
 							</div>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Skills</a></li>
-								<li><a href="#about">Me</a></li>
-								<li><a href="#contact">Contact</a></li>
+						<nav id="mainNav">
+							<button id="navToggle" class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavList">
+								<span class="icon solid fa-bars"></span>
+							</button>
+							<ul id="mainNavList">
+								<li><a href="#wis"><span class="icon solid fa-user"></span> About Me</a></li>
+								<li><a href="#work"><span class="icon solid fa-briefcase"></span> Experience</a></li>
+								<li><a href="#project"><span class="icon solid fa-rocket"></span> Capabilities</a></li>
+								<li><a href="#career"><span class="icon solid fa-cogs"></span> Tool Kit</a></li>
+								<li><a href="#testimonial"><span class="icon solid fa-star"></span> Testimonials</a></li>
+								<li><a href="#contact"><span class="icon solid fa-phone"></span> Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
 					</header>
+					<button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light and dark theme">
+						<span class="icon solid fa-moon"></span>
+					</button>
 
 				<!-- Main -->
 					<div id="main">
 
 						<!-- Profile -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/code_1.jpg" alt="" /></span>
-								<p>I am a highly motivated professional with a Bachelor's Degree in Business Administration and extensive experience in business and technology.</p> 
+							<article id="wis">
+								<h2 class="major">Who is Sheikh</h2>
+								<p>Senior Program & Operations Leader with 17+ years of international experience delivering global programmes across Operations, Quality, and Technical Program Management. I specialize in building scalable operating models, leading cross-functional teams, and driving operational excellence through data, automation, and continuous improvement.</p> 
 								
-								<p>Over the course of my career, I have gained valuable knowledge and expertise in key areas such as Sales, Customer Satisfaction, Contracting, Communications, Management/Operations, Lean methodology, and Business Analysis. Additionally, I possess strong coding and script writing skills that allow me to develop effective solutions for complex business problems</p>
+								<p>Throughout my career, I've led global programmes, managed multi-vendor operations, and partnered with Engineering, Product, HR, Finance, and executive stakeholders to deliver strategic initiatives. I enjoy solving complex business challenges by combining operational expertise with technical skills in Python, JavaScript, SQL, and API integrations to develop scalable solutions, improve decision-making, and enhance programme performance.</p>
 
-									<p>I have a proven track record of driving results and improving Metrics and KPIs by working closely with clients and stakeholders to identify their needs and expectations. As a leader, I am able to build and motivate high-performing teams, ensuring that projects are completed on time and within budget. I am adept at managing stakeholder expectations, negotiating contracts, and developing strategies that enable businesses to achieve their goals.</p>
-									
-									<p>In terms of technical skills, I have extensive experience in API, CRUD (rest, web), and Software development kit (SDKs), as well as programming languages such as JavaScript, Python, and SQL. I am skilled at designing flowcharts and developing technical documentation to guide future software development projects. I possess strong database knowledge and am able to troubleshoot technical issues quickly and effectively.</p>
-									
-									<p>My business skills include communication, planning, strategizing, and execution, stakeholder expectations management, vendor management, negotiation, project management, change management, risk management, escalation management, needs assessment, problem-solving, team management, and business analysis. I am able to identify problems, analyze data, and develop effective solutions that improve business performance and drive growth.</p>
-									
-									<p>Overall, I am a proactive and results-driven professional with a passion for technology and business. I am always seeking new challenges and opportunities to learn and grow, and I believe that my combination of technical expertise and business acumen make me an ideal candidate for any role that requires a multifaceted approach to achieving success.
-									
-									</p>
+									<p>I'm passionate about building high-performing teams, simplifying complex processes, and delivering measurable business outcomes through innovation and operational excellence.</p>
 							</article>
 
 						<!-- Skills -->
-							<article id="work">
-								<h2 class="major">Skills</h2>
-								<span class="image main"><img src="images/code_0.jpg" alt="" /></span>
-								<p>Advising & Consulting: <br>Companies/Individuals are provided with a professional view point on Business or Tech Processes/Implementations/Productivity/Accuracy/QA.</p>
-								<p>Business: <br>Strategic-Product-Planning/Project-Handling/Process-mining/Marketing/Lean-Certified/Training/Business-Review/Social-Media</p>
-								<p>Tech: <br>Python/JavaScript/HTML5/CSS/Automation/API/UI</p>
-								<p>Experience:<br> 15 years, 10 years in GCC and 5 years in EU.</p>
-								<p>For any consultation work, please feel free to get in touch.</p>
+							<article id="career">
+								<h2 class="major">🛠 Tool Kit</h2>
+								<!-- <span class="image main"><img src="images/code_0.jpg" alt="" /></span> -->
+
+								<h3 class="tech-heading">
+									Technical Expertise
+								</h3>
+
+								<section class="tech-grid">
+
+									<div class="tech-card">
+										<i class="icon brands fa-python"></i>
+										<div class="tech-info">
+											<span class="tech-title">Python</span>
+											<span class="tech-desc">Automation & data solutions.</span>
+										</div>
+									</div>
+									<div class="tech-card">
+										<i class="icon brands fa-js-square"></i>
+										<div class="tech-info">
+											<span class="tech-title">JavaScript</span>
+											<span class="tech-desc">Interactive web applications.</span>
+										</div>
+									</div>
+									<div class="tech-card">
+										<i class="icon solid fa-database"></i>
+										<div class="tech-info">
+											<span class="tech-title">SQL</span>
+											<span class="tech-desc">Data querying & analysis.</span>
+										</div>
+									</div>
+									<div class="tech-card">
+										<i class="icon solid fa-network-wired"></i>
+										<div class="tech-info">
+											<span class="tech-title">REST APIs</span>
+											<span class="tech-desc">System integration.</span>
+										</div>
+									</div>
+									<div class="tech-card">
+										<i class="icon brands fa-git-alt"></i>
+										<div class="tech-info">
+											<span class="tech-title">Git</span>
+											<span class="tech-desc">Collaborative version control.</span>
+										</div>
+									</div>
+
+								</section>
+
+								<h3 class="tech-heading">
+									AI Tools
+								</h3>
+
+								<section class="tech-grid">
+
+									<div class="tech-card">
+										<i class="icon solid fa-brain"></i>
+										<div class="tech-info">
+											<span class="tech-title">Claude</span>
+										</div>
+									</div>
+									<div class="tech-card">
+										<i class="icon solid fa-comments"></i>
+										<div class="tech-info">
+											<span class="tech-title">ChatGPT</span>
+										</div>
+									</div>
+
+								</section>
 							</article>
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">ME</h2>
-								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<p>- Searching for a new challenge to sharpen my skills even further.</p>
-								<p>- Love having a conversation on various concepts and theories.</p>
-								<p>- Unbiased mind set and approach to situations.</p>
-								<p>- Very stong verbal/written/presentation skills.</p>
-								<p>- Love to work under pressure, while simultaneously improving the business as a whole.</p>
-								<p>- Skilled in leading teams and working on frameworks for KPI/Metric improvements.</p>
+							<!-- Career -->
+							<article id="work">
+
+								<h2 class="major">💼 Experience</h2>
+							
+								<!-- <span class="image main">
+									<img src="images/pic04.jpg" alt="Experience" />
+								</span> -->
+								<div class="career-summary">
+
+									<div>
+										<h2>17+</h2>
+										<span>Years Experience</span>
+									</div>
+								
+									<div>
+										<h2>16</h2>
+										<span>Team Members Led</span>
+									</div>
+								
+									<div>
+										<h2>4</h2>
+										<span>Global Vendors Supported</span>
+									</div>
+								
+									<div>
+										<h2>1000+</h2>
+										<span>Applications Delivered</span>
+									</div>
+
+									<div>
+										<h2>52,000 Hrs</h2>
+										<span>Manual processes Automated</span>
+									</div>
+
+									<div>
+										<h2>~800K</h2>
+										<span>Overall Savings in 1 year</span>
+									</div>
+								
+								</div>
+							
+								<div class="experience-grid">
+							
+									<!-- Card 1 -->
+									<div class="experience-card">
+							
+										<div class="exp-header">
+											<h3>Programme Lead</h3>
+											<span>2025 – Present</span>
+										</div>
+							
+										<h4>ProdOps Development Quality & Reliability</h4>
+							
+										<ul>
+											<li>Led global DQ&R programme delivery</li>
+											<li>Managed 16-member cross-functional team with 8 Pods support</li>
+											<li>Governed 4 strategic vendor partnerships</li>
+											<li>Built 3 operational applications</li>
+											<li>Improved programme efficiency globally</li>
+										</ul>
+							
+									</div>
+							
+									<!-- Card 2 -->
+									<div class="experience-card">
+							
+										<div class="exp-header">
+											<h3>Operations Programme Lead</h3>
+											<span>2024 – 2025</span>
+										</div>
+							
+										<h4>Metaverse AR/VR</h4>
+							
+										<ul>
+											<li>Business process improvement</li>
+											<li>Requirements gathering</li>
+											<li>Stakeholder workshops</li>
+											<li>Agile delivery</li>
+											<li>Data analysis & reporting</li>
+										</ul>
+							
+									</div>
+							
+									<!-- Card 3 -->
+									<div class="experience-card">
+							
+										<div class="exp-header">
+											<h3>Manager - Business/Developer & Payment Partner Support Engineering [L1/L2/L3]</h3>
+											<span>2023 – 2024</span>
+										</div>
+							
+										<h4>Business Solutions</h4>
+							
+										<ul>
+											<li>Process optimisation</li>
+											<li>Vendor management</li>
+											<li>Business cases</li>
+											<li>Reporting dashboards</li>
+											<li>Operational excellence</li>
+										</ul>
+							
+									</div>
+							
+									<!-- Card 4 -->
+									<div class="experience-card">
+							
+										<div class="exp-header">
+											<h3>Lead - Business/Developer & Payment Partner Support Engineering [L1/L2]</h3>
+											<span>2022 – 2023</span>
+										</div>
+							
+										<h4>Consulting & Operations</h4>
+							
+										<ul>
+											<li>Project support</li>
+											<li>Client engagement</li>
+											<li>Business operations</li>
+											<li>Process improvement</li>
+											<li>Leadership development</li>
+										</ul>
+							
+									</div>
+									<!-- Card 5 -->
+									<div class="experience-card">
+							
+										<div class="exp-header">
+											<h3>SME - Business/Developer & Payment Partner Support Engineering [L1/L2]</h3>
+											<span>2021 – 2022</span>
+										</div>
+							
+										<h4>Consulting & Operations</h4>
+							
+										<ul>
+											<li>Project support</li>
+											<li>Client engagement</li>
+											<li>Business operations</li>
+											<li>Process improvement</li>
+											<li>Leadership development</li>
+										</ul>
+							
+									</div>
+									
+									<!-- Card 6 -->
+									<div class="experience-card">
+							
+										<div class="exp-header">
+											<h3>Developer Support Engineering [L1]</h3>
+											<span>2020 – 2021</span>
+										</div>
+							
+										<h4>Consulting & Operations</h4>
+							
+										<ul>
+											<li>Project support</li>
+											<li>Client engagement</li>
+											<li>Business operations</li>
+											<li>Process improvement</li>
+											<li>Leadership development</li>
+										</ul>
+							
+									</div>
+							
+								</div>
+							
 							</article>
+
+						<!-- Project -->
+							<article id="project">
+								<h2 class="major">Capabilities</h2>
+								<!--<span class="image main"><img src="images/pic04.jpg" alt="" /></span> -->
+								<div class="hero-highlights">
+
+									<div class="highlight">
+										<h3>🤝 Leadership</h3>
+										<p>Stakeholders • Vendors • Teams • Delivery</p>
+										<ul class="highlight-list">
+											<li>Stakeholder Management — RACI Matrix, Power-Interest Grid, Stakeholder Salience Model, Communication Plan</li>
+											<li>Vendor Management — SLAs, Vendor Scorecards, RFP/RFQ Process, QBRs</li>
+											<li>Teams — 1:1s, OKRs, Performance Reviews, Coaching & Mentoring</li>
+											<li>Programme Delivery — Agile/Scrum, Kanban, RAID Log, Roadmapping</li>
+											<li>Cross-Functional Collaboration — HR, Sales, Finance, Engineering, XFN</li>
+										</ul>
+									</div>
+
+									<div class="highlight">
+										<h3>💼 Business</h3>
+										<p>Analysis • Lean • Metrics</p>
+										<ul class="highlight-list">
+											<li>Business Analysis — BRD, FRD, process mapping (BPM), RCAs, SWOT Analysis, Gap Analysis</li>
+											<li>Lean — 5 Whys, Pareto (80/20), Fishbone, Kaizen</li>
+											<li>Business Metrics — KPI Reporting, ROI Analysis, Cost-Benefit Analysis, Business Case Development</li>
+										</ul>
+									</div>
+
+									<div class="highlight">
+										<h3>💻 Technology</h3>
+										<p>Python • JavaScript • SQL • REST APIs</p>
+										<ul class="highlight-list">
+											<li>Python — automation scripts, data cleanup tools</li>
+											<li>JavaScript — DOM automation, interactive widgets</li>
+											<li>SQL — scheduled reporting, data extraction</li>
+											<li>REST APIs — webhook & workflow integration</li>
+										</ul>
+									</div>
+
+								</div>
+									
+							</article>
+
+							<!-- Testimonial -->
+							<article id="testimonial">
+							<section class="testimonial">
+								<h2>Testimonials</h2>
+
+								<div class="testimonial-carousel">
+									<button class="carousel-arrow prev" type="button" aria-label="Previous testimonial">
+										<span class="icon solid fa-chevron-left"></span>
+									</button>
+									<div class="testimonial-track">
+
+								<div class="testimonial-card">
+								  <blockquote>
+									"I had the privilege to work with Sheikh for 1.5 years when he was the Team Lead in Genpact supporting our Developer Engineering program. Sheikh has strong technical skills. His technical expertise was one of the contributors for his team success. He not coached his team the product knowledge, but was also able to explain it to non-technical person like me. His strong communication skill enabled us to clearly align the service expectations. 
+
+									As a Team Lead, Sheikh also demonstrates his leadership and strong operational expertise. He ramped up his team in Hyderabad from zero and managed to deliver the service expectations within 3 months. He managed the end to end operations such as hiring, training, coaching, documentation, and reporting. I sincerely believe that if without Sheikh's skills and hard work, we wouldn't have achieved excellent service delivery and have built such a strong foundation for the team. 
+									
+									In addition, Sheikh is also diligent and responsible which made our collaboration easy and pleasant. His charisma and helpfulness also earned him trust from his team and built a united team culture. I believe he will continue to shine wherever he goes in the future."
+								  </blockquote>
+							  
+								  <div class="testimonial-author">
+									<h3>Chunhan Yu</h3>
+									<p>Vendor Partner Manager, Meta</p>
+									<a href="https://www.linkedin.com/in/sheikh-sahil-b97568b3/details/recommendations/?detailScreenTabIndex=0" target="_blank">
+									  LinkedIn Post
+									</a>
+								  </div>
+								</div>
+							  
+								<div class="testimonial-card">
+								  <blockquote>
+									"I had the privilege of working with Sheikh on a project aimed at improving developers' CSAT on the support provided by the Developer Support team.
+
+									Throughout the project, Sheikh demonstrated outstanding competence in data gathering and analysis. He was also an excellent communicator, providing context to the teams under his management.
+									
+									Overall, partnering with Sheikh was a great experience, and he can positively impact any team he is a part of."
+								  </blockquote>
+							  
+								  <div class="testimonial-author">
+									<h3>Bruno Kiafuka</h3>
+									<p>Business Product Engineer, Meta</p>
+									<a href="https://www.linkedin.com/in/sheikh-sahil-b97568b3/details/recommendations/?detailScreenTabIndex=0" target="_blank">
+									  LinkedIn Post
+									</a>
+								  </div>
+								</div>
+
+								<div class="testimonial-card">
+									<blockquote>
+									  "I have had the pleasure of working closely with Sheikh for the last 2.5 years as part of his work with our Developer Support team, supporting platform developers building integrations with Meta’s APIs and SDKs. His technical knowledge and understanding have been instrumental in resolving complex issues faced by external developers and top partners. Beyond his technical expertise, Sheikh stood out for his remarkable empathy and patience while assisting developers. His keen attention to detail and eagerness to learn ensured that every support interaction was thorough and effective.
+
+									  In his more recent role as a team lead, Sheikh demonstrated outstanding leadership qualities that significantly elevated the team's performance. His ability to guide and train team members empowered them to excel in their roles, driving the entire team towards success. Sheikh's commitment to delivering high-quality support led him to spearhead efforts to identify and address multiple areas of improvement, resulting in a significant boost to the team's overall performance.
+									  
+									  I have no doubt that Sheikh will continue to excel in any leadership capacity, and I wholeheartedly recommend him for future opportunities."
+									</blockquote>
+								
+									<div class="testimonial-author">
+									  <h3>Subeesh Basheer</h3>
+									  <p>Business Program/Product Engineer, Meta</p>
+									  <a href="https://www.linkedin.com/in/sheikh-sahil-b97568b3/details/recommendations/?detailScreenTabIndex=0" target="_blank">
+										LinkedIn Post
+									  </a>
+									</div>
+								  </div>
+								  
+								  <div class="testimonial-card">
+									<blockquote>
+									  "Sheikh and I worked together for Meta in Developer Support Engineering.
+									  He not only demonstrated an applaudable competency as an engineer, he also demonstrated time and again a natural ability to zoom out and see the bigger picture and then proactively produce data driven recommendations to drive the business forward.
+									  
+									  Sheikh naturally led the rest of his team and in time became the lead for the Genpact DSE team, which was extremely well deserved.
+									  Nothing was ever too much trouble for him, no task was ever too ambitious and he always had a calm demeanor (even when under much pressure) and ready smile. 
+									  Thanks to the pivotal role he played in leading the team we were able to achieve an all green scorecard for DSE for the first time ever, and achieve our strategic goals.
+									  
+									  Working with Sheikh was a privilege and a pleasure."
+									</blockquote>
+								
+									<div class="testimonial-author">
+									  <h3>Samuel Gates</h3>
+									  <p>Senior Vendor Partner Manager, Meta</p>
+									  <a href="https://www.linkedin.com/in/sheikh-sahil-b97568b3/details/recommendations/?detailScreenTabIndex=0" target="_blank">
+										LinkedIn Post
+									  </a>
+									</div>
+								  </div>
+
+									</div>
+									<button class="carousel-arrow next" type="button" aria-label="Next testimonial">
+										<span class="icon solid fa-chevron-right"></span>
+									</button>
+								</div>
+								<div class="carousel-dots">
+									<button class="dot" type="button" aria-label="Show testimonial 1"></button>
+									<button class="dot" type="button" aria-label="Show testimonial 2"></button>
+									<button class="dot" type="button" aria-label="Show testimonial 3"></button>
+									<button class="dot" type="button" aria-label="Show testimonial 4"></button>
+								</div>
+
+							  </section>
+					</article>
 
 						<!-- Contact -->
 							<article id="contact">
-								<div class="contact-method">
+								<h2 class="major">Contact</h2>
+								<section>
+									<div class="contact-method">
 										<span class="icon solid alt fa-envelope"></span>
 										<h3>Email</h3>
-										<a href="#">xecsahil3@gmail.com</a>
+										<a href="mailto:xecsahil3@gmail.com">xecsahil3@gmail.com</a>
 									</div>
 								</section>
 								<section>
@@ -100,42 +466,32 @@
 										Ireland</span>
 									</div>
 								</section>
-							</section>
-						</div>
+							</article>
+					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="https://www.facebook.com/sahil.shaikh.9256028/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="https://www.instagram.com/xecsahil" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://github.com/Ashura-Sheikh/" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/sheikh-sahil-b97568b3/"
+									class="icon brands fa-linkedin" target="_blank">
+									<span class="label">LinkedIn</span>
+									</a>
+									</li>
+								<li><a href="https://github.com/Ashura-Sheikh/" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+								<li>
+									<a href="mailto:xecsahil3@gmail.com"
+									class="icon solid fa-envelope">
+									<span class="label">Email</span>
+									</a>
+									</li>
 
 							</ul>
 							<ul class="copyright">
-								<p class="copyright">&copy; Sheikh Sahil. All Rights Reserved 2023</a>.</p>
+								<p class="copyright">&copy; Building technology that solves real business problems | 2026</a>.</p>
 							</ul>
 						</div>
 					</footer>
-					<!-- Facebook-SDK -->
-					<script>
-  						window.fbAsyncInit = function() {
-    						FB.init({
-      						appId      : '3605929036109570',
-      						xfbml      : true,
-      						version    : 'v17.0'
-    					});
-    					FB.AppEvents.logPageView();
-   					};
-
-  						(function(d, s, id){
-     						var js, fjs = d.getElementsByTagName(s)[0];
-     						if (d.getElementById(id)) {return;}
-     						js = d.createElement(s); js.id = id;
-     						js.src = "https://connect.facebook.net/en_US/sdk.js";
-     						fjs.parentNode.insertBefore(js, fjs);
-   						}(document, 'script', 'facebook-jssdk'));
-					</script>
 			</div>
 
 		<!-- BG -->
@@ -147,6 +503,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.js"></script>
+			
 
 	</body>
 </html>

@@ -1,0 +1,482 @@
+/* ==========================================
+   Custom CSS
+   All personal styling goes here
+========================================== */
+
+/* Experience: compact stat tiles */
+#work .career-summary {
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	gap: 0.75rem;
+	margin: 1.5rem 0;
+}
+
+#work .career-summary div {
+	padding: 0.65rem;
+}
+
+#work .career-summary h2 {
+	font-size: 1.5rem;
+}
+
+#work .career-summary span {
+	font-size: 0.7rem;
+}
+
+/* Experience: use extra width so cards sit side by side, matching Capabilities */
+@media screen and (min-width: 900px) {
+	#main #work {
+		width: 78vw;
+		max-width: 1300px;
+	}
+}
+
+#work .experience-grid {
+	align-items: start;
+}
+
+#work .exp-header {
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.2rem;
+}
+
+#work .exp-header span {
+	opacity: 0.6;
+}
+
+/* Experience: bullet list styling to match Capabilities' highlight-list */
+#work .experience-card ul {
+	list-style: none;
+	padding: 0;
+	margin: 1rem 0 0;
+}
+
+#work .experience-card li {
+	position: relative;
+	padding-left: 1rem;
+	margin: 0 0 0.65rem;
+	line-height: 1.65;
+}
+
+#work .experience-card li:last-child {
+	margin-bottom: 0;
+}
+
+#work .experience-card li:before {
+	content: '–';
+	position: absolute;
+	left: 0;
+	color: #49bf9d;
+}
+
+/* Projects: highlight cards with a detail list per item */
+#project .hero-highlights {
+	gap: 1.25rem;
+	align-items: flex-start;
+}
+
+#project .highlight {
+	width: 280px;
+	padding: 1.5rem;
+}
+
+#project .highlight h3 {
+	font-size: 1.1rem;
+}
+
+#project .highlight p {
+	font-size: 0.9rem;
+}
+
+.highlight-list {
+	list-style: none;
+	margin: 1rem 0 0;
+	padding: 0;
+	text-align: left;
+	font-size: 0.88rem;
+	line-height: 1.65;
+	color: rgba(255, 255, 255, 0.75);
+}
+
+.highlight-list li {
+	position: relative;
+	padding-left: 1rem;
+	margin-bottom: 0.65rem;
+}
+
+.highlight-list li:last-child {
+	margin-bottom: 0;
+}
+
+.highlight-list li:before {
+	content: '–';
+	position: absolute;
+	left: 0;
+	color: #49bf9d;
+}
+
+/* Projects: use extra width so 3 cards can sit side by side on wide screens */
+@media screen and (min-width: 900px) {
+	#main #project {
+		width: 78vw;
+		max-width: 1300px;
+	}
+}
+
+/* Use more of the available screen width on larger viewports */
+@media screen and (min-width: 900px) {
+	#main article {
+		width: 62vw;
+		max-width: 1100px;
+	}
+}
+
+/* Skills: wider cards, smaller icon, inline icon+text layout */
+#career .tech-grid {
+	grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	gap: 0.75rem;
+	margin-top: 1rem;
+}
+
+#career .tech-heading {
+	margin: 1.25rem 0 0.75rem;
+}
+
+#career .tech-heading:first-of-type {
+	margin-top: 0;
+}
+
+.tech-card {
+	display: flex;
+	align-items: center;
+	gap: 0.85rem;
+	text-align: left;
+	padding: 0.85rem;
+}
+
+.tech-card i {
+	flex-shrink: 0;
+	width: 2.25rem;
+	height: 2.25rem;
+	margin-bottom: 0;
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(73, 191, 157, 0.12);
+	border-radius: 8px;
+}
+
+.tech-info {
+	min-width: 0;
+}
+
+.tech-title {
+	margin-bottom: 0.15rem;
+}
+
+body.light-theme .tech-card i {
+	background: rgba(73, 191, 157, 0.15);
+}
+
+/* About Me: paragraph spacing */
+#wis p {
+	margin: 0 0 1.25rem 0;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+	position: fixed;
+	top: 1.5rem;
+	right: 1.5rem;
+	z-index: 10;
+	width: 2.75rem;
+	height: 2.75rem;
+	border-radius: 100%;
+	border: solid 1px rgba(255, 255, 255, 0.5);
+	background: rgba(27, 31, 34, 0.85);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	color: #ffffff !important;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.theme-toggle:hover {
+	background: rgba(45, 50, 54, 0.9);
+}
+
+.theme-toggle .icon:before {
+	margin: 0;
+}
+
+/* Nav icons */
+#header nav ul li a .icon:before {
+	margin-right: 0.5em;
+}
+
+/* ==========================================
+   Responsive nav (hamburger collapse)
+========================================== */
+
+.nav-toggle {
+	display: none;
+}
+
+@media screen and (max-width: 900px) {
+
+	.nav-toggle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.75rem;
+		height: 2.75rem;
+		margin: 0 auto 1rem;
+		border-radius: 100%;
+		border: solid 1px rgba(255, 255, 255, 0.5);
+		background: rgba(255, 255, 255, 0.05);
+		color: #ffffff !important;
+		cursor: pointer;
+	}
+
+	#header nav ul {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	#header nav.nav-open ul {
+		display: flex;
+	}
+
+	#header nav ul li {
+		border-left: none;
+		border-top: solid 1px #ffffff;
+		width: 100%;
+	}
+
+	#header nav ul li:first-child {
+		border-top: none;
+	}
+
+	#header nav ul li a {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+body.light-theme .nav-toggle {
+	border-color: rgba(27, 31, 34, 0.4);
+	background: rgba(27, 31, 34, 0.05);
+	color: #1b1f22 !important;
+}
+
+body.light-theme #header nav ul li {
+	border-top-color: rgba(27, 31, 34, 0.35);
+}
+
+/* ==========================================
+   Testimonial carousel
+========================================== */
+
+.testimonial-carousel {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.testimonial-track {
+	flex: 1;
+	min-width: 0;
+}
+
+@media screen and (max-width: 736px) {
+
+	.testimonial-carousel {
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+
+	.testimonial-track {
+		order: 1;
+		flex-basis: 100%;
+	}
+
+	.carousel-arrow.prev {
+		order: 2;
+	}
+
+	.carousel-arrow.next {
+		order: 3;
+		margin-left: auto;
+	}
+}
+
+.testimonial-card {
+	display: none;
+}
+
+.testimonial-card.current {
+	display: block;
+}
+
+.carousel-arrow {
+	flex-shrink: 0;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 100%;
+	border: solid 1px rgba(255, 255, 255, 0.3);
+	background: rgba(255, 255, 255, 0.05);
+	color: #ffffff;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.carousel-arrow:hover {
+	background: rgba(255, 255, 255, 0.15);
+}
+
+.carousel-arrow .icon:before {
+	margin: 0;
+}
+
+.carousel-dots {
+	display: flex;
+	justify-content: center;
+	gap: 0.6rem;
+	margin-top: 1.5rem;
+}
+
+.carousel-dots .dot {
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 100%;
+	border: none;
+	padding: 0;
+	background: rgba(255, 255, 255, 0.3);
+	cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+	background: #ffffff;
+}
+
+/* ==========================================
+   Scroll-reveal
+========================================== */
+
+.reveal {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.in-view {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ==========================================
+   Tilt effect (cards respond to mouse position)
+========================================== */
+
+.tech-grid, .experience-grid, .hero-highlights {
+	perspective: 1000px;
+}
+
+.tech-card, .experience-card, .highlight {
+	will-change: transform;
+}
+
+/* ==========================================
+   Light theme overrides
+========================================== */
+
+body.light-theme {
+	background: #f4f4f4;
+}
+
+body.light-theme #bg:before {
+	background-image: linear-gradient(to top, rgba(244, 244, 244, 0.92), rgba(244, 244, 244, 0.92)), url("../../images/overlay.png");
+}
+
+body.light-theme, body.light-theme input, body.light-theme select, body.light-theme textarea {
+	color: #1b1f22;
+}
+
+body.light-theme a {
+	border-bottom-color: rgba(27, 31, 34, 0.4);
+}
+
+body.light-theme h1 {
+	color: #1b1f22;
+}
+
+/* The modal cards (#main article) always keep their dark background regardless of
+   page theme, so their contents must stay on light-on-dark colors, not follow the
+   page-level light theme. Restore that here since color/border inherit otherwise. */
+body.light-theme #main article {
+	color: #ffffff;
+}
+
+body.light-theme #main article a {
+	border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+body.light-theme .theme-toggle {
+	border-color: rgba(27, 31, 34, 0.15);
+	background: #ffffff;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+	color: #1b1f22 !important;
+}
+
+body.light-theme .theme-toggle:hover {
+	background: #f0f0f0;
+}
+
+body.light-theme #header nav ul,
+body.light-theme #header nav ul li {
+	border-color: rgba(27, 31, 34, 0.35);
+}
+
+body.light-theme #header nav ul li a:hover {
+	background-color: rgba(27, 31, 34, 0.06);
+}
+
+body.light-theme #header nav ul li a:active {
+	background-color: rgba(27, 31, 34, 0.12);
+}
+
+body.light-theme ul.icons li a {
+	box-shadow: inset 0 0 0 1px rgba(27, 31, 34, 0.4);
+}
+
+body.light-theme ul.icons li a:hover {
+	background-color: rgba(27, 31, 34, 0.06);
+}
+
+body.light-theme ul.icons li a:active {
+	background-color: rgba(27, 31, 34, 0.12);
+}
+
+/* tech-card, business-card, highlight, experience-card, career-summary, tech-desc,
+   highlight-list, carousel controls all live inside the always-dark modal cards, so
+   they intentionally keep their default light-on-dark styling in both page themes. */
+
+/* Keep long-form text at a comfortable reading width even though wide cards use more screen space */
+@media screen and (min-width: 900px) {
+	#wis p {
+		max-width: 700px;
+		margin: 0 auto 1.25rem;
+	}
+
+	.testimonial-card blockquote {
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
