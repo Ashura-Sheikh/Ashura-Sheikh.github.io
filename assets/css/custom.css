@@ -77,15 +77,33 @@
 	color: #49bf9d;
 }
 
-/* Projects: highlight cards with a detail list per item */
+/* Projects (Capabilities): highlight cards with a detail list per item.
+   Switched from the base template's centered flex-wrap to an explicit grid,
+   2026-08-17 — with 4 cards (Leadership/Business/Technology/AI & Automation)
+   the old layout let the 4th card wrap onto its own row, centered alone
+   under no particular card above it, reading as misaligned. A real 2-column
+   grid means every row always has exactly 2 items, so nothing ever floats
+   alone. Base (narrow) is 1 column, stacked; widens to 2 columns together
+   with the existing #project 900px breakpoint below. */
 #project .hero-highlights {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
 	gap: 1.25rem;
-	align-items: flex-start;
+	align-items: start;
 }
 
 #project .highlight {
 	width: 280px;
 	padding: 1.5rem;
+	justify-self: center;
+}
+
+@media screen and (min-width: 700px) {
+	#project .hero-highlights {
+		grid-template-columns: repeat(2, 280px);
+		gap: 1.5rem;
+	}
 }
 
 #project .highlight h3 {
@@ -123,7 +141,13 @@
 	color: #49bf9d;
 }
 
-/* Projects: use extra width so 3 cards can sit side by side on wide screens */
+/* Projects: extra container width, so the centered 2-column highlight grid
+   (see #project .hero-highlights above) has comfortable breathing room on
+   wide screens rather than looking cramped. Stale note removed 2026-08-17:
+   this used to say "so 3 cards can sit side by side" — that was the layout
+   before AI & Automation existed as a 4th card; the grid is fixed at 2
+   columns now, not 3, so this width just controls whitespace, not column
+   count. */
 @media screen and (min-width: 900px) {
 	#main #project {
 		width: 78vw;
